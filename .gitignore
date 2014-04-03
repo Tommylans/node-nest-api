@@ -69,7 +69,6 @@ coverage
 
 # Personal #
 ##########
-coffee/sandbox
-src/sandbox
+
 
 .coveralls.yml
