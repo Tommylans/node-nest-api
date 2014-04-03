@@ -1,0 +1,46 @@
+{
+  "name": "nest-api",
+  "version": "0.0.1",
+  "description": "The main Nest API for node (also see: nest-thermostat and nest-protect)",
+  "main": "./lib/nest-api.js",
+  "scripts": {
+    "test": "./node_modules/.bin/istanbul test --report html --hook-run-in-context ./node_modules/.bin/_mocha",
+    "test-travis": "./node_modules/.bin/istanbul cover --hook-run-in-context ./node_modules/.bin/_mocha -- -R spec;A=$?;cat coverage/lcov.info | ./node_modules/.bin/coveralls;exit $A"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/johnwyles/node-nest-api.git"
+  },
+  "author": "John Wyles <john@johnwyles.com> (http://johnwyles.com)",
+  "license": "MIT",
+  "bugs": {
+    "mail": "john@johnwyles.com",
+    "url": "https://github.com/johnwyles/node-nest-api/issues"
+  },
+  "homepage": "https://github.com/johnwyles/node-nest-api",
+  "devDependencies": {
+    "coffee-script": "~1",
+    "mocha": "*",
+    "chai": "*",
+    "istanbul": "*",
+    "gulp": "~3",
+    "coveralls": "~2",
+    "gulp-watch": "~0",
+    "gulp-coffee": "~1.2.2",
+    "coffee-loader": "~0",
+    "gulp-mocha": "~0.4.1"
+  },
+  "keywords": [
+    "nest",
+    "api",
+    "node",
+    "node.js",
+    "coffeescript",
+    "thermostat",
+    "protect"
+  ],
+  "engines": {
+    "node": ">=0.9",
+    "npm": ">=1.2.10"
+  }
+}
