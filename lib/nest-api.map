@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "nest-api.js",
+  "sourceRoot": "..",
+  "sources": [
+    "src/nest-api.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA,IAAA,GAAA;;AAAM,CAAN;CAEE,EAAU,CAAV,IAAA;;CAAA,EACU,CADV,IACA;;CADA,CAAA,CAES,IAAT;;CAEa,CAAA,CAAA,KAAA,SAAE;CAAgC,EAAhC,CAAD;CAAiC,EAAhB,CAAD;CAJ9B,EAIa;;CAJb,EAMa,KAAA,CAAC,EAAd;CACG,EAAW,CAAX,IAAD,GAAA;CAPF,EAMa;;CANb,EASa,KAAA,CAAC,EAAd;CACG,EAAW,CAAX,IAAD,GAAA;CAVF,EASa;;CATb,EAYO,EAAP,IAAO;;CAZP;;CAFF;;AAiBA,CAjBA,EAiBiB,GAAX,CAAN"
+}

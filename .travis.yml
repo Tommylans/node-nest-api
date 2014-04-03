@@ -1,4 +1,10 @@
+---
 language: node_js
-node_js:
-  - 0.10
-script: npm run test-travis
+
+node_js: 0.1
+
+script: make test.coverage.coveralls
+
+env:
+  global:
+    secure: ! 'Fd/AZjKXgrqKg9Z0nu7ov9pbT76jeDYqQpBB8vtweFCs0qpYhcjK+K+8uDec9nu31bwoqwRuy2Lm7FCpChTmXm514mKdH2Jpv5agxxtdfVuv0rDqNaNB7PhFqVztBiCHs6U9rFToQGcdVVBpenqUsmVaylJALYN06l+GZaRxsss='
