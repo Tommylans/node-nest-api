@@ -25,7 +25,7 @@ test.clean:
 	@git clean -fdx test/specs/fixtures
 
 test: build
-	@$(MOCHA) --compilers coffee:coffee-script \
+	@$(MOCHA) --compilers coffee:coffee-script/register \
 		--ui bdd \
 		--reporter spec \
 		--recursive \
@@ -34,7 +34,7 @@ test: build
 
 test.coverage: build
 	@$(ISTANBUL) cover $(_MOCHA) -- \
-		--compilers coffee:coffee-script \
+		--compilers coffee:coffee-script/register \
 		--ui bdd \
 		--reporter spec \
 		--recursive \
@@ -42,7 +42,7 @@ test.coverage: build
 		test/specs
 
 test.coverage.preview: test.coverage
-	@cd coverage/lcov-report && python -m SimpleHTTPServer 8080
+	@cd coverage/lcov-report && python -m SimpleHTTPServer 9090
 
 test.coverage.coveralls: test.coverage
 	@sed -i.bak \

@@ -1,16 +1,28 @@
 # NestApi
 NestApi = require('../../lib/nest-api')
 
+# Nock
+nock = require('nock');
+
 # Chai
 chai = require('chai')
-
 assert = chai.assert
 should = chai.should()
 expect = chai.expect
 
-
+# NestAPI
 describe 'NestApi', ->
   nestApi = new NestApi
+
+  # Nock example:
+  # couchdb = nock('http://myapp.iriscouch.com')
+  #               .get('/users/1')
+  #               .reply(200, {
+  #                 _id: '123ABC',
+  #                 _rev: '946B7D1C',
+  #                 username: 'pgte',
+  #                 email: 'pedro.teixeira@gmail.com'
+  #                });
 
   beforeEach () ->
     nestApi = new NestApi("nest_username", "nest_password")
