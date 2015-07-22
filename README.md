@@ -18,22 +18,32 @@ Usage
 Configuration
 =============
 In order to instantiate and use the main Nest API should use the following:
+```javascript
+var NestApi = require('nest-api');
+var nestApi = new NestApi('YOUR_EMAIL', 'YOUR_PASSWORD');
+// Login (must be called first to establish a session)
+nestApi.login(function(data) {
+    // A callback for something you would want to do on login
+});
+
+nestApi.get(function(data) {
+  // Get a property from the Nest API.  See the Appendix for a list of properties.
+});
+```
+Examples
+========
+```javascript
 var NestApi = require('nest-api');
 var nestApi = new NestApi('YOUR_EMAIL', 'YOUR_PASSWORD');
 
-    // Login (must be called first to establish a session)
-    nestApi.login(function(data) {
-        // A callback for something you would want to do on login
-    });
-
-    nestApi.get('PROPERTY_NAME', function(data) {
-      // Get a property from the Nest API.  See the Appendix for a list of properties.
-    });
-
-
-Examples
-========
-TODO: Fill in some examples
+nestApi.login(function(data) {
+  nestApi.get(function(data) {
+    var shared = data.shared[Object.keys(data.schedule)[0]];
+    console.log('Currently ' + shared.current_temperature + ' degrees celcius');
+    console.log('Target is ' + shared.target_temperature + ' degrees celcius');
+  });
+});
+```
 
 Contributing
 ============
