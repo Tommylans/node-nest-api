@@ -17,7 +17,7 @@ class NestApi
 
   constructor: (@username=null, @password=null) ->
 
-  setUsername: (@username) ->
+  setUsername: (username) ->
     @username = username
 
   setPassword: (password) ->
@@ -40,7 +40,7 @@ class NestApi
         if data.error?
           console.log "Error authenticating: #{data.error}
                       (#{data.error_description})"
-          return
+          false
 
         session = data
         session.urls.transport_url = url.parse session.urls.transport_url

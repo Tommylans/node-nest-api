@@ -47,6 +47,7 @@ describe 'NestApi', ->
       expect(nestApi.password).to.equal "new_nest_password"
 
   # TODO: Finish this
-  describe "NestApi Login", ->
-    it "is a function", ->
-      expect(nestApi.login()).to.equal true
+#  describe "NestApi Login", ->
+#    it "is a function", ->
+#      expect(nestApi.login()).to.equal true
+
