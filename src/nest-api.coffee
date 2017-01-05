@@ -117,7 +117,7 @@ class NestApi
       path: path
       method: 'GET'
       headers:
-        'User-Agent': @userAgent
+        'User-Agent': userAgent
         'X-nl-user-id': session.userid
         'X-nl-protocol-version': '1'
         'Accept-Language': 'en-us'
