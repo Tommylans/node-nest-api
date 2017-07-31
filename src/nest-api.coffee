@@ -11,7 +11,7 @@ class NestApi
   username  = null
   password  = null
   session   = {}
-  userAgent = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2)
+  @userAgent:  "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2)
               AppleWebKit/537.17 (KHTML, like Gecko) Chrome/24.0.1309.0
               Safari/537.17"
 
@@ -76,7 +76,7 @@ class NestApi
       method: 'POST'
       headers:
         'Content-Type': contentType
-        'User-Agent': userAgent
+        'User-Agent': NestApi.userAgent
         'Content-Length': post_data.length
 
     if @session and @session.access_token
@@ -117,7 +117,7 @@ class NestApi
       path: path
       method: 'GET'
       headers:
-        'User-Agent': @userAgent
+        'User-Agent': NestApi.userAgent
         'X-nl-user-id': session.userid
         'X-nl-protocol-version': '1'
         'Accept-Language': 'en-us'
